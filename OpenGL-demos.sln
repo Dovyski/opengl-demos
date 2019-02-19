@@ -31,6 +31,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bumpmap", "src\bumpmap\bump
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "model-md2", "src\model-md2\model-md2.vcxproj", "{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "coordinate-system", "src\coordinate-system\coordinate-system.vcxproj", "{CB9501BE-A9AF-47EB-9151-53CECD9A463D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -151,6 +153,14 @@ Global
 		{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}.Release|x64.Build.0 = Release|x64
 		{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}.Release|x86.ActiveCfg = Release|Win32
 		{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}.Release|x86.Build.0 = Release|Win32
+		{CB9501BE-A9AF-47EB-9151-53CECD9A463D}.Debug|x64.ActiveCfg = Debug|x64
+		{CB9501BE-A9AF-47EB-9151-53CECD9A463D}.Debug|x64.Build.0 = Debug|x64
+		{CB9501BE-A9AF-47EB-9151-53CECD9A463D}.Debug|x86.ActiveCfg = Debug|Win32
+		{CB9501BE-A9AF-47EB-9151-53CECD9A463D}.Debug|x86.Build.0 = Debug|Win32
+		{CB9501BE-A9AF-47EB-9151-53CECD9A463D}.Release|x64.ActiveCfg = Release|x64
+		{CB9501BE-A9AF-47EB-9151-53CECD9A463D}.Release|x64.Build.0 = Release|x64
+		{CB9501BE-A9AF-47EB-9151-53CECD9A463D}.Release|x86.ActiveCfg = Release|Win32
+		{CB9501BE-A9AF-47EB-9151-53CECD9A463D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
