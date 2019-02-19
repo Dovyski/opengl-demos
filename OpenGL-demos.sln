@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "texture", "src\texture\text
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bumpmap", "src\bumpmap\bumpmap.vcxproj", "{9EA2BB9C-9E3F-47F0-84E3-1232FFE1AE19}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "model-md2", "src\model-md2\model-md2.vcxproj", "{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{9EA2BB9C-9E3F-47F0-84E3-1232FFE1AE19}.Release|x64.Build.0 = Release|x64
 		{9EA2BB9C-9E3F-47F0-84E3-1232FFE1AE19}.Release|x86.ActiveCfg = Release|Win32
 		{9EA2BB9C-9E3F-47F0-84E3-1232FFE1AE19}.Release|x86.Build.0 = Release|Win32
+		{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}.Debug|x64.ActiveCfg = Debug|x64
+		{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}.Debug|x64.Build.0 = Debug|x64
+		{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}.Debug|x86.ActiveCfg = Debug|Win32
+		{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}.Debug|x86.Build.0 = Debug|Win32
+		{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}.Release|x64.ActiveCfg = Release|x64
+		{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}.Release|x64.Build.0 = Release|x64
+		{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}.Release|x86.ActiveCfg = Release|Win32
+		{BCEBF6EF-6348-489D-9E1A-AB6FEAC67EFB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
