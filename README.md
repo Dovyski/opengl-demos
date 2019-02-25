@@ -1,6 +1,6 @@
 # OpenGL Demos
 
-This repository contains several small OpenGL applications built to demonstrate concepts of Computer Graphics. It is used as support material for the Computer Graphics course at the [Federal University of Fronteira Sul](https://www.uffs.edu.br).
+This repository contains a compendium of small OpenGL applications built to demonstrate concepts of Computer Graphics. It is used as support material for the Computer Graphics course at the [Federal University of Fronteira Sul](https://www.uffs.edu.br). The demos in this repository were mainly created by [Cesar Tadeu Pozzer](http://www-usr.inf.ufsm.br/~pozzer/) at the [Federal University of Santa Maria](https://www.ufsm.br)
 
 > ***NOTICE: currently this repository contains documentation for Windows users only. If you intend to use Linux, please talk to the course responsible.***
 
