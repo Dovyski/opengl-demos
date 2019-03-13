@@ -46,15 +46,16 @@ void display()
 
 	// Render a red square
 	glColor3f(1, 0, 0);
-	glRotatef(45, 0, 0, 1);
+	glRotatef(45.0f, 0.0f, 0.0f, 1.0f);
 	glTranslatef(0.2f, 0.2f, 0);
 	glRectf(-0.1f, 0.1f, 0.1f, -0.1f);
 
 	glLoadIdentity();
 
+	// Render a blue square
 	glColor3f(0, 0, 1);
 	glTranslatef(0.2f, 0.2f, 0);
-	glRotatef(45, 0, 0, 1);
+	glRotatef(45.0f, 0, 0, 1.0f);
 	glRectf(-0.1f, 0.1f, 0.1f, -0.1f);
 
 	glutSwapBuffers();

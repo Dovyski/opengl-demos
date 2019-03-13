@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "coordinate-system", "src\co
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "transformation-simple", "src\transformation-simple\transformation-simple.vcxproj", "{E0431D68-E279-4221-9BC9-B2C1D771F8E1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glut-super-basic", "src\glut-super-basic\glut-super-basic.vcxproj", "{E141140C-E520-4FE9-872D-34B4E7D1BC39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -171,6 +173,14 @@ Global
 		{E0431D68-E279-4221-9BC9-B2C1D771F8E1}.Release|x64.Build.0 = Release|x64
 		{E0431D68-E279-4221-9BC9-B2C1D771F8E1}.Release|x86.ActiveCfg = Release|Win32
 		{E0431D68-E279-4221-9BC9-B2C1D771F8E1}.Release|x86.Build.0 = Release|Win32
+		{E141140C-E520-4FE9-872D-34B4E7D1BC39}.Debug|x64.ActiveCfg = Debug|x64
+		{E141140C-E520-4FE9-872D-34B4E7D1BC39}.Debug|x64.Build.0 = Debug|x64
+		{E141140C-E520-4FE9-872D-34B4E7D1BC39}.Debug|x86.ActiveCfg = Debug|Win32
+		{E141140C-E520-4FE9-872D-34B4E7D1BC39}.Debug|x86.Build.0 = Debug|Win32
+		{E141140C-E520-4FE9-872D-34B4E7D1BC39}.Release|x64.ActiveCfg = Release|x64
+		{E141140C-E520-4FE9-872D-34B4E7D1BC39}.Release|x64.Build.0 = Release|x64
+		{E141140C-E520-4FE9-872D-34B4E7D1BC39}.Release|x86.ActiveCfg = Release|Win32
+		{E141140C-E520-4FE9-872D-34B4E7D1BC39}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
