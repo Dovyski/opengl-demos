@@ -145,13 +145,13 @@ void display()
 void keyboard(int key, int x, int y)
 {
 	if (key == GLUT_KEY_RIGHT) {
-		rY += 15;
+		rY += 5;
 	} else if (key == GLUT_KEY_LEFT) {
-		rY -= 15;
+		rY -= 5;
 	} else if (key == GLUT_KEY_DOWN) {
-		rX -= 15;
+		rX -= 5;
 	} else if (key == GLUT_KEY_UP) {
-		rX += 15;
+		rX += 5;
 	}
 
 	// Request display update
