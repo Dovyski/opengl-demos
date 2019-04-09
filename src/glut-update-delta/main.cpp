@@ -9,6 +9,7 @@
 #include <GL/glut.h>
 #include <GL/gl.h>
 #include <iostream>
+#include "math.h"
 
  // Constants to define the width/height of the window
 const int WIDTH = 800;
