@@ -2,7 +2,7 @@
 *   Programa para ilustrar:
 *   - Uso da Material
 *   - Gouraud Shading
-*   - Projecao ortográfica
+*   - Projecao ortogrï¿½fica
 
 *   Autor: Cesar Tadeu Pozzer
 *   UFSM - 15/06/2007
@@ -61,7 +61,6 @@ void init(void)
 
 void display(void)
 {
-     Sleep(3);
    glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
    glLoadIdentity();
@@ -137,7 +136,7 @@ int main(int argc, char** argv)
    glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
    glutInitWindowSize (600, 600);
    glutInitWindowPosition (100, 100);
-   glutCreateWindow("Iluminação. Pressione W ou outra tecla");
+   glutCreateWindow("Iluminaï¿½ï¿½o. Pressione W ou outra tecla");
    init ();
    glutDisplayFunc(display);
    glutKeyboardFunc(keyboard);

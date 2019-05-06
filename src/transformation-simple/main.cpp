@@ -2,8 +2,8 @@
  * Simple demonstration of transformations.
  */
 
-#include <gl/glut.h>
-#include <gl/gl.h>
+#include <GL/glut.h>
+#include <GL/gl.h>
 
 void renderCoordinateAxis()
 {

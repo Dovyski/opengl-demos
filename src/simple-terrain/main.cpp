@@ -27,8 +27,6 @@ void render(void)
 {
    color(1,0,0);
 
-   Sleep(10);
-
    s->transforma();
    s->render();
 }

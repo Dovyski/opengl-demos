@@ -6,8 +6,8 @@
  * License: MIT
  */
 
-#include <gl/glut.h>
-#include <gl/gl.h>
+#include <GL/glut.h>
+#include <GL/gl.h>
 #include <iostream>
 
 // Constants to define the width/height of the window
