@@ -4,8 +4,6 @@
 #include "Point.h"
 using namespace std;
 
-#define M_PI 3.14159
-
 // global variables
 static struct {
 	// current parameters for controlling glulookat
