@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glut-timer-func", "src\glut
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glut-update-delta", "src\glut-update-delta\glut-update-delta.vcxproj", "{62892733-C257-48F6-A546-52E07807A263}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "texture-simple", "src\texture-simple\texture-simple.vcxproj", "{43BC699B-A8E3-4C21-A191-032B11676107}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -211,6 +213,14 @@ Global
 		{62892733-C257-48F6-A546-52E07807A263}.Release|x64.Build.0 = Release|x64
 		{62892733-C257-48F6-A546-52E07807A263}.Release|x86.ActiveCfg = Release|Win32
 		{62892733-C257-48F6-A546-52E07807A263}.Release|x86.Build.0 = Release|Win32
+		{43BC699B-A8E3-4C21-A191-032B11676107}.Debug|x64.ActiveCfg = Debug|x64
+		{43BC699B-A8E3-4C21-A191-032B11676107}.Debug|x64.Build.0 = Debug|x64
+		{43BC699B-A8E3-4C21-A191-032B11676107}.Debug|x86.ActiveCfg = Debug|Win32
+		{43BC699B-A8E3-4C21-A191-032B11676107}.Debug|x86.Build.0 = Debug|Win32
+		{43BC699B-A8E3-4C21-A191-032B11676107}.Release|x64.ActiveCfg = Release|x64
+		{43BC699B-A8E3-4C21-A191-032B11676107}.Release|x64.Build.0 = Release|x64
+		{43BC699B-A8E3-4C21-A191-032B11676107}.Release|x86.ActiveCfg = Release|Win32
+		{43BC699B-A8E3-4C21-A191-032B11676107}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
