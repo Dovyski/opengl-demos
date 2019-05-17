@@ -1,18 +1,14 @@
 /**
-*   Programa para ilustrar:
-*   - Uso da Material
-*   - Gouraud Shading
-*   - Projecao ortogr�fica
+ * Programa para ilustrar:
+ *  - Uso da Material
+ *  - Gouraud Shading
+ *  - Projecao ortografica
+ *
+ * Author: Cesar Tadeu Pozzer <pozzer@inf.ufsm.br, pozzer3@gmail.com>, UFSM - 15/06/2007
+ * Contributions: Fernando Bevilacqua <fernando.bevilacqua@uffs.edu.br>
+ */
 
-*   Autor: Cesar Tadeu Pozzer
-*   UFSM - 15/06/2007
-*
-*   pozzer@inf.ufsm.br
-*   pozzer3@gmail.com
-*
-**/
-
-#include "GL/glut.h"
+#include <GL/glut.h>
 #include <math.h>
 #include <stdio.h>
 
@@ -31,7 +27,6 @@ GLfloat light_1_position[] = { 1, 1, 1, 0 };
 GLfloat light_1_difuse[]   = { 0, 1, 0 };  //GREEN
 GLfloat light_1_specular[] = { 1, 1, 1 };  //WHITE
 GLfloat light_1_ambient[]  = { 0.2, 0.2, 0.2 };
-
 
 void init(void)
 {
@@ -61,61 +56,57 @@ void init(void)
 
 void display(void)
 {
-   glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glLoadIdentity();
 
-   glLoadIdentity();
+	glPushMatrix();
+		glTranslated(4,0,0);
+		glRotated(angObj+=0.1, 1, 1, 1);
+		glutSolidCube(5);
+	glPopMatrix();
 
-   glPushMatrix();
-   glTranslated(4,0,0);
-   glRotated(angObj+=0.1, 1, 1, 1);
-   //glLightfv(GL_LIGHT1, GL_POSITION, light_1_position);
+	glPushMatrix();
+		glTranslated(-4,0,0);
+		glRotated(angObj+=0.1, 1, 1, 0);
+		glutSolidSphere (3.0, 20, 16);
+	glPopMatrix();
 
-   glutSolidCube (5);
-   glPopMatrix();
+	//muda a posicao da fonte luminosa
+	light_0_position[0] = cos(angLight)*9; //x
+	light_0_position[1] = sin(angLight)*9; //y
+	light_0_position[2] = 0; //z
+	light_0_position[3] = 0; //w
+	angLight += 0.004;
 
+	light_1_position[0] = cos(angLight/2.2)*9; //x
+	light_1_position[1] = sin(angLight/2.2)*9; //y
+	light_1_position[2] = 0; //z
+	light_1_position[3] = 0; //w
 
-   glPushMatrix();
-   glTranslated(-4,0,0);
-   glRotated(angObj+=0.1, 1, 1, 0);
-   glutSolidSphere (3.0, 20, 16);
-   glPopMatrix();
+	glPushMatrix();
+		//posiciona a fonte luminosa
+		glTranslated(100,0,1000);
+		glLightfv(GL_LIGHT0, GL_POSITION, light_0_position);
+		glLightfv(GL_LIGHT1, GL_POSITION, light_1_position);
+	glPopMatrix();
 
-   //muda a posicao da fonte luminosa
-   light_0_position[0] = cos(angLight)*9; //x
-   light_0_position[1] = sin(angLight)*9; //y
-   light_0_position[2] = 0; //z
-   light_0_position[3] = 0; //w
-   angLight+=0.004;
+	// desenha a fonte
+	glTranslated(light_0_position[0], light_0_position[1], light_0_position[2]);
+	glutSolidSphere(1.0, 20, 16);
 
-   light_1_position[0] = cos(angLight/2.2)*9; //x
-   light_1_position[1] = sin(angLight/2.2)*9; //y
-   light_1_position[2] = 0; //z
-   light_1_position[3] = 0; //w
+	glLoadIdentity();
+	glTranslated(light_1_position[0], light_1_position[1], light_1_position[2]);
+	glutSolidSphere(1.0, 20, 16);
 
-   glPushMatrix();
-   glTranslated(100,0,1000);
-   //posiciona a fonte luminosa
-   glLightfv(GL_LIGHT0, GL_POSITION, light_0_position);
-   glLightfv(GL_LIGHT1, GL_POSITION, light_1_position);
-   glPopMatrix();
-
-   //desenha a fonte
-   glTranslated(light_0_position[0], light_0_position[1],light_0_position[2]);
-   glutSolidSphere (1.0, 20, 16);
-
-   glLoadIdentity();
-   glTranslated(light_1_position[0], light_1_position[1],light_1_position[2]);
-   glutSolidSphere (1.0, 20, 16);
-    /* */
-   glutSwapBuffers();
+	glutSwapBuffers();
 }
 
 void reshape (int w, int h)
 {
-   glViewport (0, 0, (GLsizei) w, (GLsizei) h);
-   glMatrixMode (GL_PROJECTION);
+   glViewport(0, 0, (GLsizei) w, (GLsizei) h);
+   glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
-   glOrtho (-10, 10,  -10,10,  -10.0, 10.0);  //projecao ortografica
+   glOrtho (-10, 10, -10,10, -10.0, 10.0);
 
    glMatrixMode(GL_MODELVIEW);
    glLoadIdentity();
@@ -131,17 +122,22 @@ void keyboard(unsigned char key, int x, int y)
 
 int main(int argc, char** argv)
 {
-   printf("Digite w ou outra letra para mudar o modo de visualizacao");
    glutInit(&argc, argv);
+
    glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-   glutInitWindowSize (600, 600);
-   glutInitWindowPosition (100, 100);
-   glutCreateWindow("Ilumina��o. Pressione W ou outra tecla");
-   init ();
+   glutInitWindowSize(600, 600);
+   glutInitWindowPosition(100, 100);
+
+   glutCreateWindow("Lighting. Press W or any other key");
+   printf("Type W or any other key to change the visualization mode.\n");
+
+   init();
+
    glutDisplayFunc(display);
    glutKeyboardFunc(keyboard);
    glutIdleFunc(display);
    glutReshapeFunc(reshape);
+   
    glutMainLoop();
    return 0;
 }
