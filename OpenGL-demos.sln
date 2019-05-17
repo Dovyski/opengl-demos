@@ -49,6 +49,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "culling", "src\culling\cull
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "depth", "src\depth\depth.vcxproj", "{9A9B4D66-2F90-4668-83E3-F9571FD35D4E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "light-spheres", "src\light-spheres\light-spheres.vcxproj", "{B834F8FB-17D9-4DC1-9E27-AE929D72529D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -241,6 +243,14 @@ Global
 		{9A9B4D66-2F90-4668-83E3-F9571FD35D4E}.Release|x64.Build.0 = Release|x64
 		{9A9B4D66-2F90-4668-83E3-F9571FD35D4E}.Release|x86.ActiveCfg = Release|Win32
 		{9A9B4D66-2F90-4668-83E3-F9571FD35D4E}.Release|x86.Build.0 = Release|Win32
+		{B834F8FB-17D9-4DC1-9E27-AE929D72529D}.Debug|x64.ActiveCfg = Debug|x64
+		{B834F8FB-17D9-4DC1-9E27-AE929D72529D}.Debug|x64.Build.0 = Debug|x64
+		{B834F8FB-17D9-4DC1-9E27-AE929D72529D}.Debug|x86.ActiveCfg = Debug|Win32
+		{B834F8FB-17D9-4DC1-9E27-AE929D72529D}.Debug|x86.Build.0 = Debug|Win32
+		{B834F8FB-17D9-4DC1-9E27-AE929D72529D}.Release|x64.ActiveCfg = Release|x64
+		{B834F8FB-17D9-4DC1-9E27-AE929D72529D}.Release|x64.Build.0 = Release|x64
+		{B834F8FB-17D9-4DC1-9E27-AE929D72529D}.Release|x86.ActiveCfg = Release|Win32
+		{B834F8FB-17D9-4DC1-9E27-AE929D72529D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
