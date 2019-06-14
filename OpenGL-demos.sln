@@ -53,6 +53,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "light-spheres", "src\light-
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shader-hello-world", "src\shader-hello-world\shader-hello-world.vcxproj", "{12429A02-962E-4F89-A956-A90976FAAFC4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shader-uniform", "src\shader-uniform\shader-uniform.vcxproj", "{A0D9505B-33EC-4F64-9C50-9684863DD865}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -261,6 +263,14 @@ Global
 		{12429A02-962E-4F89-A956-A90976FAAFC4}.Release|x64.Build.0 = Release|x64
 		{12429A02-962E-4F89-A956-A90976FAAFC4}.Release|x86.ActiveCfg = Release|Win32
 		{12429A02-962E-4F89-A956-A90976FAAFC4}.Release|x86.Build.0 = Release|Win32
+		{A0D9505B-33EC-4F64-9C50-9684863DD865}.Debug|x64.ActiveCfg = Debug|x64
+		{A0D9505B-33EC-4F64-9C50-9684863DD865}.Debug|x64.Build.0 = Debug|x64
+		{A0D9505B-33EC-4F64-9C50-9684863DD865}.Debug|x86.ActiveCfg = Debug|Win32
+		{A0D9505B-33EC-4F64-9C50-9684863DD865}.Debug|x86.Build.0 = Debug|Win32
+		{A0D9505B-33EC-4F64-9C50-9684863DD865}.Release|x64.ActiveCfg = Release|x64
+		{A0D9505B-33EC-4F64-9C50-9684863DD865}.Release|x64.Build.0 = Release|x64
+		{A0D9505B-33EC-4F64-9C50-9684863DD865}.Release|x86.ActiveCfg = Release|Win32
+		{A0D9505B-33EC-4F64-9C50-9684863DD865}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
