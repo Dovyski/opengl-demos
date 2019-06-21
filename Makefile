@@ -8,7 +8,7 @@
 ###################################################################
 
 CC = g++
-LIBS = -lglfw -lGL -lm -lX11 -lglut -lGLU
+LIBS = -lglfw -lGL -lm -lX11 -lglut -lGLU -ldl
 CFLAGS = -g -Wall -Wno-deprecated
 
 CURRENT_DIR := $(strip $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST)))))
@@ -36,7 +36,7 @@ install-deps:
 		mkdir -p $(BUILD_OBJ_FOLDER); \
 		mkdir -p $(BUILD_FOLDER); \
 		cd $(BUILD_FOLDER); \
-		$(CC) $(CFLAGS) $(DEMO_SRC_DIR)/*.cpp -o $(DEMO_BIN_PATH) $(LIBS); \
+		$(CC) $(CFLAGS) $(DEMO_SRC_DIR)/*.c* -o $(DEMO_BIN_PATH) $(LIBS); \
 		printf "Copying data files..."; \
 		cp -R $(DATA_FOLDER)/* $(BUILD_FOLDER); \
 		echo "done!"; \
