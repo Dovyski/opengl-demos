@@ -7,6 +7,7 @@
 // https://github.com/Dav1dde/glad
 #include "glad.h"
 #include <GLFW/glfw3.h>
+#include <math.h>
 
 // settings
 const unsigned int SCR_WIDTH = 800;
