@@ -167,7 +167,7 @@ int main()
 		// create transformations
 		glm::mat4 transform = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
 		transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
-		transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+		transform = glm::rotate(transform, (float)glm::radians(glfwGetTime() * 10), glm::vec3(0.0f, 0.0f, 1.0f));
 
 		// update the uniform transform
 		unsigned int transformLoc = glGetUniformLocation(shaderProgram, "transform");
