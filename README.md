@@ -85,7 +85,7 @@ make help
 You can also compile a particular demo by navigating into its source code folder and running `make` there:
 
 ```
-cd src/rotating-cude && make
+cd src/rotating-cube && make
 ```
 
 ## License
