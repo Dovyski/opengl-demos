@@ -1,8 +1,8 @@
 /**
  * This demo shows how to periodically call an update() function to create
- * animations over time. In this case, the animation is to rotate a red square.
+ * animations over time. In this case, the animation is to rotate a chess tower.
  *
- * Author: Fernando Bevilacqua <fernando.bevilacqua@uffs.edu.br>
+ * Author: Cleisson Vieira Raimundi <cleisson.raimundi@gmail.com>
  * License: MIT
  */
 
