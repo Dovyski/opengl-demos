@@ -76,9 +76,9 @@ void strippedCube()
 
 	glColor3f(0.45f, 0.05f, 0.45f);
 	glBegin(GL_TRIANGLES);
-		glVertex3f(x, -y, -z);
-		glVertex3f(-x, -y, -z);
 		glVertex3f(x, -y, z);
+		glVertex3f(-x, -y, -z);
+		glVertex3f(x, -y, -z);
 	glEnd();
 
 	// FRONT face
