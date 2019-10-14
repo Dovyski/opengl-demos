@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.271
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hello-world", "src\hello-world\hello-world.vcxproj", "{C885EF95-947E-4AAD-844E-1E1198554531}"
 EndProject
@@ -60,6 +60,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shader-transform-rotate", "src\shader-transform-rotate\shader-transform-rotate.vcxproj", "{29BB72F3-694A-4339-AA22-04D55AC11A53}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shader-transform-matrix", "src\shader-transform-matrix\shader-transform-matrix.vcxproj", "{FFD6868F-F0C6-4A0A-9E38-4C292C4FA4EC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "clone", "src\clone\clone.vcxproj", "{37B4221E-4B7F-44F7-8840-57228D6052D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -301,6 +303,14 @@ Global
 		{FFD6868F-F0C6-4A0A-9E38-4C292C4FA4EC}.Release|x64.Build.0 = Release|x64
 		{FFD6868F-F0C6-4A0A-9E38-4C292C4FA4EC}.Release|x86.ActiveCfg = Release|Win32
 		{FFD6868F-F0C6-4A0A-9E38-4C292C4FA4EC}.Release|x86.Build.0 = Release|Win32
+		{37B4221E-4B7F-44F7-8840-57228D6052D0}.Debug|x64.ActiveCfg = Debug|x64
+		{37B4221E-4B7F-44F7-8840-57228D6052D0}.Debug|x64.Build.0 = Debug|x64
+		{37B4221E-4B7F-44F7-8840-57228D6052D0}.Debug|x86.ActiveCfg = Debug|Win32
+		{37B4221E-4B7F-44F7-8840-57228D6052D0}.Debug|x86.Build.0 = Debug|Win32
+		{37B4221E-4B7F-44F7-8840-57228D6052D0}.Release|x64.ActiveCfg = Release|x64
+		{37B4221E-4B7F-44F7-8840-57228D6052D0}.Release|x64.Build.0 = Release|x64
+		{37B4221E-4B7F-44F7-8840-57228D6052D0}.Release|x86.ActiveCfg = Release|Win32
+		{37B4221E-4B7F-44F7-8840-57228D6052D0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
