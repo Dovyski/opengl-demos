@@ -2,7 +2,6 @@
 /**
  * A simple OpenGL program that draws a simple 2d car
  *
- * Author: Otávio Secco
  * Date: Tuesday 15 October 2019
  */
 
@@ -32,91 +31,91 @@ void DDcar() { //CREATES A 2D CAR
 	glPushMatrix();
 	glColor3f(1, 0, 0);
 
-		glPushMatrix();
-		glTranslatef(.5f, 0, 0);	//FRONT WHEEL
-		glScalef(.25f, .25f, 0);
-		glBegin(GL_LINE_STRIP);	//NUMBER OF VORTEXS BELLOW (16) BY DEFAULT				
-		for (double i = 0; i < 2 * PI; i += PI / 16) //DRAWS A POLYGON WITH 16 VORTEXS
-			glVertex3f(cos(i) * .5f, sin(i) * .5f, 0.0); // THE RADIUS OF THE CIRCLE IS 0.5f
-		glEnd();						// REALIZE THAT I SCALE IT ABOVE
-		glPopMatrix();
+	glPushMatrix();
+	glTranslatef(.5f, 0, 0);	//FRONT WHEEL
+	glScalef(.25f, .25f, 0);
+	glBegin(GL_LINE_STRIP);	//NUMBER OF VORTEXS BELLOW (16) BY DEFAULT				
+	for (double i = 0; i < 2 * PI; i += PI / 16) //DRAWS A POLYGON WITH 16 VORTEXS
+		glVertex3f(cos(i) * .5f, sin(i) * .5f, 0.0); // THE RADIUS OF THE CIRCLE IS 0.5f
+	glEnd();						// REALIZE THAT I SCALE IT ABOVE
+	glPopMatrix();
 
-		glPushMatrix();
-		glTranslatef(-.5f, 0, 0);	// BACK WHEEL
-		glScalef(.25f, .25f, 0);
-		glBegin(GL_LINE_STRIP);
-		for (double i = 0; i < 2 * PI; i += PI / 16) // SPECIAL THANKS TO DSB FROM
-			glVertex3f(cos(i) * .5f, sin(i) * .5f, 0.0); // community.khronos.org/t/drawing-circles-in-opengl/50790/2
-		glEnd();
-		glPopMatrix();
+	glPushMatrix();
+	glTranslatef(-.5f, 0, 0);	// BACK WHEEL
+	glScalef(.25f, .25f, 0);
+	glBegin(GL_LINE_STRIP);
+	for (double i = 0; i < 2 * PI; i += PI / 16) // SPECIAL THANKS TO DSB FROM
+		glVertex3f(cos(i) * .5f, sin(i) * .5f, 0.0); // community.khronos.org/t/drawing-circles-in-opengl/50790/2
+	glEnd();
+	glPopMatrix();
 
-		glPushMatrix();
-		glBegin(GL_LINES);		// CAR LOWER PART			
-		glVertex3f(.375f, 0, 0);
-		glVertex3f(-.375f, 0, 0);
-		glEnd();
-		glPopMatrix();
+	glPushMatrix();
+	glBegin(GL_LINES);		// CAR LOWER PART			
+	glVertex3f(.375f, 0, 0);
+	glVertex3f(-.375f, 0, 0);
+	glEnd();
+	glPopMatrix();
 
-		glPushMatrix();
-		glBegin(GL_LINES);	// CAR LOWER-BACK PART
-		glVertex3f(-.625, 0, 0);
-		glVertex3f(-.65f, 0, 0);
-		glVertex3f(-.65f, 0, 0);
-		glVertex3f(-.75f, .125f, 0);
-		glEnd();
-		glPopMatrix();
+	glPushMatrix();
+	glBegin(GL_LINES);	// CAR LOWER-BACK PART
+	glVertex3f(-.625, 0, 0);
+	glVertex3f(-.65f, 0, 0);
+	glVertex3f(-.65f, 0, 0);
+	glVertex3f(-.75f, .125f, 0);
+	glEnd();
+	glPopMatrix();
 
-		glPushMatrix();
-		glBegin(GL_LINES);	// CAR BACK PART
-		glVertex3f(-.75, .125f, 0);
-		glVertex3f(-.75f, .35f, 0);
-		glEnd();
-		glPopMatrix();
+	glPushMatrix();
+	glBegin(GL_LINES);	// CAR BACK PART
+	glVertex3f(-.75, .125f, 0);
+	glVertex3f(-.75f, .35f, 0);
+	glEnd();
+	glPopMatrix();
 
-		glPushMatrix();
-		glBegin(GL_LINES);	// CAR BACK-UPPER PART
-		glVertex3f(-.75f, .35f, 0);
-		glVertex3f(-.375, .6f, 0);
-		glEnd();
-		glPopMatrix();
+	glPushMatrix();
+	glBegin(GL_LINES);	// CAR BACK-UPPER PART
+	glVertex3f(-.75f, .35f, 0);
+	glVertex3f(-.375, .6f, 0);
+	glEnd();
+	glPopMatrix();
 
-		glPushMatrix();
-		glBegin(GL_LINES);	// CAR UPPER PART
-		glVertex3f(-.375, .6f, 0);
-		glVertex3f(.175f, .6f, 0);
-		glEnd();
-		glPopMatrix();
+	glPushMatrix();
+	glBegin(GL_LINES);	// CAR UPPER PART
+	glVertex3f(-.375, .6f, 0);
+	glVertex3f(.175f, .6f, 0);
+	glEnd();
+	glPopMatrix();
 
-		glPushMatrix();
-			glBegin(GL_LINES);	// CAR FRONT-UPPER PART
-			glVertex3f(.175f, .6f, 0);	// WINDSHIELD
-			glVertex3f(.475, .4f, 0);	// WINDSHIELD
-			glVertex3f(.475, .4f, 0);	// HOOD
-			glVertex3f(.75, .35f, 0);	// HOOD
-			glEnd();
-		glPopMatrix();
+	glPushMatrix();
+	glBegin(GL_LINES);	// CAR FRONT-UPPER PART
+	glVertex3f(.175f, .6f, 0);	// WINDSHIELD
+	glVertex3f(.475, .4f, 0);	// WINDSHIELD
+	glVertex3f(.475, .4f, 0);	// HOOD
+	glVertex3f(.75, .35f, 0);	// HOOD
+	glEnd();
+	glPopMatrix();
 
-		glPushMatrix(); // HEADLIGHTS CREATION AND POSITIONING
-			glTranslatef(.38f, .175f, 0);	
-			glScalef(.5f, .5f, 0);
-			drawHeadlights(); // FUNCTION CREATED ABOVE
-		glPopMatrix();
+	glPushMatrix(); // HEADLIGHTS CREATION AND POSITIONING
+	glTranslatef(.38f, .175f, 0);
+	glScalef(.5f, .5f, 0);
+	drawHeadlights(); // FUNCTION CREATED ABOVE
+	glPopMatrix();
 
-		glPushMatrix();
-			glBegin(GL_LINES);	// CAR LOWER-FRONT PART
-			glVertex3f(.625f, 0, 0);
-			glVertex3f(.75f, 0, 0);
-			glVertex3f(.75f, 0, 0);
-			glVertex3f(.82f, .025f, 0);
-			glEnd();
-		glPopMatrix();
+	glPushMatrix();
+	glBegin(GL_LINES);	// CAR LOWER-FRONT PART
+	glVertex3f(.625f, 0, 0);
+	glVertex3f(.75f, 0, 0);
+	glVertex3f(.75f, 0, 0);
+	glVertex3f(.82f, .025f, 0);
+	glEnd();
+	glPopMatrix();
 
-		glPushMatrix();	//CAR FRONT PART
-			glBegin(GL_LINES);
-				glVertex3f(.82f, .025f, 0);
-				glVertex3f(.82f, .285f, 0);
-			glEnd();
-		glPopMatrix();
+	glPushMatrix();	//CAR FRONT PART
+	glBegin(GL_LINES);
+	glVertex3f(.82f, .025f, 0);
+	glVertex3f(.82f, .285f, 0);
+	glEnd();
+	glPopMatrix();
 
 	glEnd();
 	glPopMatrix();
@@ -134,7 +133,7 @@ void display()
 	glLoadIdentity();
 
 	glRotatef(-45, 1, 1, 1);
-	DDDcar();
+	DDcar();
 
 	glFlush();
 	glutSwapBuffers();
@@ -154,7 +153,6 @@ void keyboard(int key, int x, int y)
 	else if (key == GLUT_KEY_UP) {
 		rX += 5;
 	}
-
 	// Request display update
 	glutPostRedisplay();*/
 }
