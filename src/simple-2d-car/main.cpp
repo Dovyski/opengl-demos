@@ -2,6 +2,7 @@
 /**
  * A simple OpenGL program that draws a simple 2d car
  *
+ * Author: Otávio Secco
  * Date: Tuesday 15 October 2019
  */
 
