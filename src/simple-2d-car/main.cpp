@@ -2,7 +2,7 @@
 /**
  * A simple OpenGL program that draws a simple 2d car
  *
- * Author: Ot·vio Secco
+ * Author: Ot√°vio Secco
  * Date: Tuesday 15 October 2019
  */
 
@@ -17,7 +17,7 @@ void drawHeadlights() {
 	glPushMatrix();
 	glBegin(GL_LINE_STRIP);
 	double angle = 0.0f; //Car Headlight
-	for (angle = 0.0f; angle <= 90; angle += 0.01f) {
+	for (angle = 0.0f; angle <= 90; angle += 0.01f) { // BASICLY MAKES AN 90 DEGREE LINE 
 		double rad = PI * angle / 180;	//SPECIAL THANKS TO -> Clickmit Wg
 		glVertex3f(.75f + .125f * cos(rad), .225f + .125f * sin(rad), 0.0f); // stackoverflow.com/questions/10570359/how-do-i-draw-an-half-circle-in-opengl/13206574
 	}//Car Headlight
@@ -26,39 +26,39 @@ void drawHeadlights() {
 }
 
 
-void DDcar() { //Creates the Car
+void DDcar() { //CREATES A 2D CAR
 	glTranslatef(-.125f, 0, 0);	//MOVE THE CAR A LITTLE BACKWARDS TO MAKE THE FRONT PART
 
 	glPushMatrix();
 	glColor3f(1, 0, 0);
 
 		glPushMatrix();
-		glTranslatef(.5f, 0, 0);	//Front wheel
+		glTranslatef(.5f, 0, 0);	//FRONT WHEEL
 		glScalef(.25f, .25f, 0);
-		glBegin(GL_LINE_STRIP);	//Number of vortexs: V				
-		for (double i = 0; i < 2 * PI; i += PI / 16) //Draws a poligon with 16 vortexs
-			glVertex3f(cos(i) * .5f, sin(i) * .5f, 0.0); // The radius of the circle is 5.f
-		glEnd();											 // Notice that I Scale it above
+		glBegin(GL_LINE_STRIP);	//NUMBER OF VORTEXS BELLOW (16) BY DEFAULT				
+		for (double i = 0; i < 2 * PI; i += PI / 16) //DRAWS A POLYGON WITH 16 VORTEXS
+			glVertex3f(cos(i) * .5f, sin(i) * .5f, 0.0); // THE RADIUS OF THE CIRCLE IS 0.5f
+		glEnd();						// REALIZE THAT I SCALE IT ABOVE
 		glPopMatrix();
 
 		glPushMatrix();
-		glTranslatef(-.5f, 0, 0);	//Back Whell
+		glTranslatef(-.5f, 0, 0);	// BACK WHEEL
 		glScalef(.25f, .25f, 0);
 		glBegin(GL_LINE_STRIP);
-		for (double i = 0; i < 2 * PI; i += PI / 16) // Special thanks to DSB from
+		for (double i = 0; i < 2 * PI; i += PI / 16) // SPECIAL THANKS TO DSB FROM
 			glVertex3f(cos(i) * .5f, sin(i) * .5f, 0.0); // community.khronos.org/t/drawing-circles-in-opengl/50790/2
 		glEnd();
 		glPopMatrix();
 
 		glPushMatrix();
-		glBegin(GL_LINES);		// Car lower part			
+		glBegin(GL_LINES);		// CAR LOWER PART			
 		glVertex3f(.375f, 0, 0);
 		glVertex3f(-.375f, 0, 0);
 		glEnd();
 		glPopMatrix();
 
 		glPushMatrix();
-		glBegin(GL_LINES);	// Car lower back part
+		glBegin(GL_LINES);	// CAR LOWER-BACK PART
 		glVertex3f(-.625, 0, 0);
 		glVertex3f(-.65f, 0, 0);
 		glVertex3f(-.65f, 0, 0);
@@ -67,43 +67,43 @@ void DDcar() { //Creates the Car
 		glPopMatrix();
 
 		glPushMatrix();
-		glBegin(GL_LINES);	// Car back part
+		glBegin(GL_LINES);	// CAR BACK PART
 		glVertex3f(-.75, .125f, 0);
 		glVertex3f(-.75f, .35f, 0);
 		glEnd();
 		glPopMatrix();
 
 		glPushMatrix();
-		glBegin(GL_LINES);	// Car back-upper part
+		glBegin(GL_LINES);	// CAR BACK-UPPER PART
 		glVertex3f(-.75f, .35f, 0);
 		glVertex3f(-.375, .6f, 0);
 		glEnd();
 		glPopMatrix();
 
 		glPushMatrix();
-		glBegin(GL_LINES);	// Car upper part
+		glBegin(GL_LINES);	// CAR UPPER PART
 		glVertex3f(-.375, .6f, 0);
 		glVertex3f(.175f, .6f, 0);
 		glEnd();
 		glPopMatrix();
 
 		glPushMatrix();
-			glBegin(GL_LINES);	// Car front - upper part
-			glVertex3f(.175f, .6f, 0);
-			glVertex3f(.475, .4f, 0);	// windshield
-			glVertex3f(.475, .4f, 0);
-			glVertex3f(.75, .35f, 0);	// hood
+			glBegin(GL_LINES);	// CAR FRONT-UPPER PART
+			glVertex3f(.175f, .6f, 0);	// WINDSHIELD
+			glVertex3f(.475, .4f, 0);	// WINDSHIELD
+			glVertex3f(.475, .4f, 0);	// HOOD
+			glVertex3f(.75, .35f, 0);	// HOOD
 			glEnd();
 		glPopMatrix();
 
-		glPushMatrix(); // Headlights creation and position
+		glPushMatrix(); // HEADLIGHTS CREATION AND POSITIONING
 			glTranslatef(.38f, .175f, 0);	
 			glScalef(.5f, .5f, 0);
 			drawHeadlights(); // FUNCTION CREATED ABOVE
 		glPopMatrix();
 
 		glPushMatrix();
-			glBegin(GL_LINES);	// Car lower front part
+			glBegin(GL_LINES);	// CAR LOWER-FRONT PART
 			glVertex3f(.625f, 0, 0);
 			glVertex3f(.75f, 0, 0);
 			glVertex3f(.75f, 0, 0);
@@ -121,8 +121,6 @@ void DDcar() { //Creates the Car
 	glEnd();
 	glPopMatrix();
 }
-
-
 
 
 void display()
