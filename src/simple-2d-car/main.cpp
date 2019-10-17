@@ -118,8 +118,32 @@ void DDcar() { //CREATES A 2D CAR
 	glEnd();
 	glPopMatrix();
 
+
+	glPushMatrix();
+	glBegin(GL_LINES);
+	//	ADD SOME LINES - JUST FOR DECORATION
+	glVertex3f(.475f, .4f, 0);	// A DECAY TO FIT WITH
+	glVertex3f(.475f, .35f, 0);	// THE TRUNK DETAIL
+	glVertex3f(.475f, .35f, 0);	// DIVISION BETWEEN WINDOWS AND DOOR
+	glVertex3f(-.375, .35f, 0);	// 
+	glVertex3f(-.375f, 0, 0);	// BACK DOOR
+	glVertex3f(-.375f, .35, 0);	// BACK DOOR
+	glVertex3f(.475f, .125, 0);	// FRONT DOOR TO FIT WITH THE WHEEL AND THE 
+	glVertex3f(.475f, .35, 0);	// HOOD
+	glVertex3f(0, 0, 0);	// THE MIDDLE BETWEEN BOTH DOORS (ABOVE -.375 + .375 = 0)
+	glVertex3f(0, .35f, 0);	// THE MIDDLE BETWEEN BOTH DOORS (ABOVE -.375 + .375 = 0)
+	glVertex3f(-.75f, .35f, 0); // TRUNK
+	glVertex3f(-.375f, .35f, 0); // TRUNK
+	glVertex3f(-.375f, .6f, 0);	// TRUNK
+	glVertex3f(-.375f, .35f, 0); // TRUNK
 	glEnd();
 	glPopMatrix();
+
+
+	glEnd();
+	glPopMatrix();
+
+
 }
 
 
