@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A0D9505B-33EC-4F64-9C50-9684863DD865}</ProjectGuid>
-    <RootNamespace>shader-uniform</RootNamespace>
+    <ProjectGuid>{9122B2FA-FAC3-4D70-841F-8820F6054BDD}</ProjectGuid>
+    <RootNamespace>depth</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,12 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="glad.h" />
-    <ClInclude Include="khrplatform.h" />
+    <None Include="Makefile" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
