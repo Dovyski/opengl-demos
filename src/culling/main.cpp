@@ -76,9 +76,39 @@ void strippedCube()
 
 	glColor3f(0.45f, 0.05f, 0.45f);
 	glBegin(GL_TRIANGLES);
-		glVertex3f(x, -y, -z);
-		glVertex3f(-x, -y, -z);
 		glVertex3f(x, -y, z);
+		glVertex3f(-x, -y, -z);
+		glVertex3f(x, -y, -z);
+	glEnd();
+
+	// FRONT face
+	glColor3f(0.4f, 0.3f, 0.5f);
+	glBegin(GL_TRIANGLES);
+		glVertex3f(x, y, -z);
+		glVertex3f(x, -y, -z);
+		glVertex3f(-x, y, -z);
+	glEnd();
+
+	glColor3f(0.45f, 0.35f, 0.55f);
+	glBegin(GL_TRIANGLES);
+		glVertex3f(-x, -y, -z);
+		glVertex3f(x, -y, -z);
+		glVertex3f(-x, y, -z);
+	glEnd();
+
+  // TOP face
+	glColor3f(0.4f, 0.0f, 0.4f);
+	glBegin(GL_TRIANGLES);
+		glVertex3f(x, y, z);
+		glVertex3f(-x, y, z);
+		glVertex3f(-x, y, -z);
+	glEnd();
+
+	glColor3f(0.45f, 0.05f, 0.45f);
+	glBegin(GL_TRIANGLES);
+		glVertex3f(x, y, -z);
+		glVertex3f(-x, y, -z);
+		glVertex3f(x, y, z);
 	glEnd();
 }
 
@@ -108,7 +138,7 @@ void display()
 	//  - GL_CW: clockwise ordering
 	glFrontFace(GL_CW);
 
-	// Render a cube without the top and front faces.
+	// Render a cube.
 	strippedCube();
 
 	glFlush();
