@@ -88,6 +88,28 @@ You can also compile a particular demo by navigating into its source code folder
 cd src/rotating-cude && make
 ```
 
+### 3. Demos related to `Three.js` (optional)
+
+There are several demos that use [Three.js](https://threejs.org), a lightweight cross-browser JavaScript library/API used to create and display animated 3D computer graphics on a Web browser.
+
+To improve your experience with the demos related to `Three.js`, install [Visual Studio Code](https://code.visualstudio.com):
+
+```
+apt install code
+```
+
+Then install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension:
+
+```
+code --install-extension ritwickdey.liveserver
+```
+
+Finally, open the `opengl-demos` folder in Visual Studio Code and click the `Go Live` button in the taskbar:
+
+![Gif showing how the Go Live button in the taskbar](.github/docs/vscode-live-server-animated-demo.gif)
+
+Demos related to three.js will be available under `/src/threejs-*/`, e.g. [http://127.0.0.1:5500/src/threejs-hello-world/](http://127.0.0.1:5500/src/threejs-hello-world/).
+
 ## License
 
 The code files in this repository have mixed licenses. Please refer to each file/project to check its license.
