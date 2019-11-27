@@ -11,11 +11,13 @@ let renderer;
 
 let uniforms = {
     colorA: { type: 'vec3', value: new THREE.Color(0xff0000) },
-    colorB: { type: 'vec3', value: new THREE.Color(0x00ff00) }
+    colorB: { type: 'vec3', value: new THREE.Color(0x00ff00) },
+    time: { type: 'float', value: 0 }
 };
 
 let vertexShader = `
     varying vec4 modelViewPosition; 
+    uniform float time; 
 
     void main() {
         modelViewPosition = modelViewMatrix * vec4(position, 1.0);
@@ -26,6 +28,7 @@ let vertexShader = `
 let fragmentShader = `
     uniform vec3 colorA; 
     uniform vec3 colorB; 
+    uniform float time;
 
     void main() {
         vec3 finalColor = colorA + colorB;
@@ -58,9 +61,6 @@ function addBasicCube() {
 }
 
 function addShadingCube() {
-    uniforms.colorA = { type: 'vec3', value: new THREE.Color(0xff0000) };
-    uniforms.colorB = { type: 'vec3', value: new THREE.Color(0x00ff00) };
-
     let geometry = new THREE.BoxGeometry(1, 1, 1);
 
     let material = new THREE.ShaderMaterial({
@@ -77,6 +77,8 @@ function addShadingCube() {
 
 function animationLoop() {
     renderer.render(scene, camera);
+
+    uniforms.time += 0.001;
 
     scene.traverse(function(node) {
         if(node instanceof THREE.Mesh) {
