@@ -32,6 +32,8 @@ let fragmentShader = `
 
     void main() {
         vec3 finalColor = colorA + colorB;
+        finalColor.x = 0.2 + cos(time) * 1.0;
+        finalColor.y = sin(time) * 0.5;
         gl_FragColor = vec4(finalColor, 1.0);
     }
 `;
@@ -78,7 +80,7 @@ function addShadingCube() {
 function animationLoop() {
     renderer.render(scene, camera);
 
-    uniforms.time += 0.001;
+    uniforms.time.value += 0.1;
 
     scene.traverse(function(node) {
         if(node instanceof THREE.Mesh) {
