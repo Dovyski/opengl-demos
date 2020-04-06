@@ -48,40 +48,40 @@ var draw = function(){
 
 // PERLIN NOISE
 
-var lerp = function(a0, a1, w){ return ((1.0 - w)*a0 + w*a1);}
+// var lerp = function(a0, a1, w){ return ((1.0 - w)*a0 + w*a1);}
 
-var dotGridGradient = function(ix, iy, x, y){
+// var dotGridGradient = function(ix, iy, x, y){
  
-    var Gradient = [1280][720][2]
+//     var Gradient = [1280][720][2]
 
-    var dx = x - ix;
-    var dy = y - iy;
-    return (dx*Gradient[iy][ix][0] + dy*Gradient[iy][ix][1]);
-}
+//     var dx = x - ix;
+//     var dy = y - iy;
+//     return (dx*Gradient[iy][ix][0] + dy*Gradient[iy][ix][1]);
+// }
 
-var PerlinNoise = function(x, y){
+// var PerlinNoise = function(x, y){
 
-    var x0 = x;
-    var x1 = x0 + 1; // OLHO NO 1
-    var y0 = y;
-    var y1 = y0 + 1; // OLHO NO 1
+//     var x0 = x;
+//     var x1 = x0 + 1; // OLHO NO 1
+//     var y0 = y;
+//     var y1 = y0 + 1; // OLHO NO 1
 
-    var sx = x - x0;
-    var sy = y - y0;
+//     var sx = x - x0;
+//     var sy = y - y0;
     
-    var n0, n1, ix0, ix1, value;
+//     var n0, n1, ix0, ix1, value;
 
-    n0 = dotGridGradient(x0, y0, x, y);
-    n1 = dotGridGradient(x1, y0, x, y);
-    ix0 = lerp(n0, n1, sx);
+//     n0 = dotGridGradient(x0, y0, x, y);
+//     n1 = dotGridGradient(x1, y0, x, y);
+//     ix0 = lerp(n0, n1, sx);
 
-    n0 = dotGridGradient(x0, y1, x, y);
-    n1 = dotGridGradient(x1, y1, x, y);
-    ix1 = lerp(n0, n1, sx);
+//     n0 = dotGridGradient(x0, y1, x, y);
+//     n1 = dotGridGradient(x1, y1, x, y);
+//     ix1 = lerp(n0, n1, sx);
 
-    value = lerp(ix0, ix1, sy);
-    return value;
-}
+//     value = lerp(ix0, ix1, sy);
+//     return value;
+// }
 
 // PERLIN NOISE
 
